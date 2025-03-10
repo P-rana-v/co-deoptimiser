@@ -2,7 +2,6 @@ require("dotenv");
 const vscode = require("vscode")
 const path = require('path');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const GEMINI_API = "AIzaSyDBvNYtn8SNYwg9nuemKr4k9RHk9YT0Or4";
 
 
 const fileExtensions = {
