@@ -74,7 +74,7 @@ function startTracking(context) {
                 });
             }
             else {
-                if (Math.random() < 1/12) {
+                if (Math.random() < 1/6) {
                     editor.edit(editBuilder => {
                         const fullRange = new vscode.Range(
                             editor.document.positionAt(0),
@@ -84,7 +84,7 @@ function startTracking(context) {
                     });
                     vscode.window.showWarningMessage("Oops! Looks like your code just vanished. Better luck next time!");
                 } 
-                else if (Math.random() < 1/12) {
+                else if (Math.random() < 1/6) {
                     const clipboardText = await vscode.env.clipboard.readText();
                     editor.edit(editBuilder => {
                         editBuilder.insert(editor.selection.active, clipboardText.split('').sort(() => 0.5 - Math.random()).join(''));

@@ -22,6 +22,11 @@
             "id": "javascript",
             "aliases": ["JavaScript"],
             "extensions": [".js", ".jsx"]
+        },
+        {
+          "id": "python",
+          "extensions": [".py"],
+          "aliases": ["Python"]
         }
     ],
   "configuration": {
@@ -50,6 +55,10 @@
       {
         "command": "extension.setRoasterMode",
         "title": "Set Roaster Mode"
+      },
+      {
+        "command": "extension.showLeaderboard",
+        "title": "Show Leaderboard"
       }
     ]
   },

@@ -13,17 +13,17 @@ let lastRoastTime = 0;
 const ROAST_TIMEOUT = 2 * 60 * 1000; // 2 minutes
 
 async function onFileSave(document, isManual = false) {
-    // console.log("File saved:", document.fileName);
-    // const diagnostics = vscode.languages.getDiagnostics(document.uri);
-    // const now = Date.now();
+    console.log("File saved:", document.fileName);
+    const diagnostics = vscode.languages.getDiagnostics(document.uri);
+    const now = Date.now();
 
-    // if (diagnostics.length > 0) {
-    //     if (isManual || now - lastRoastTime >= ROAST_TIMEOUT) {
-    //         lastRoastTime = now;
-    //         const roastMessage = await generateRoast(diagnostics);
-    //         vscode.window.showErrorMessage(roastMessage);
-    //     }
-    // }
+    if (diagnostics.length > 0) {
+        if (isManual || now - lastRoastTime >= ROAST_TIMEOUT) {
+            lastRoastTime = now;
+            const roastMessage = await generateRoast(diagnostics);
+            vscode.window.showErrorMessage(roastMessage);
+        }
+    }
 }
 
 function activate(context) {

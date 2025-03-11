@@ -3,7 +3,7 @@ const vscode = require('vscode');
 function lateNightReminder() {
     const currentHour = new Date().getHours();
     
-    if (currentHour >= 0 && currentHour < 5) { // Between midnight and 5 AM
+    if (currentHour >= 11 && currentHour < 14) { // Between midnight and 5 AM
         vscode.window.showWarningMessage(
             "Still trying to fix that bug? Just sleep, it'll still be broken tomorrow."
         );

@@ -22,7 +22,7 @@ const roastMessages = [
 
 class IdleTracker {
     constructor() {
-        this.idleTime = 5000; // 15 seconds
+        this.idleTime = 15000; // 15 seconds
         this.timeout = null;
         this.isTracking = false;
         this.inversionCount = 0;

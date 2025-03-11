@@ -11,7 +11,7 @@ function roastAndRestartFile() {
     // 50% probability of triggering a crash
     if (x < 1/6) {
       vscode.window.showErrorMessage(
-        "Oops, looks like you don’t deserve to run this masterpiece right now. See ya! 💀",
+        "An unexpected error has occurred!",
         { modal: true }
       );
 
@@ -24,7 +24,7 @@ function roastAndRestartFile() {
           "vscode.open",
           vscode.Uri.file(filePath)
         );
-      }, 15000);
+      }, 10000);
     }
   }
 }
